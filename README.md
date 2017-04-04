@@ -1,5 +1,7 @@
 # tail-number
 
+![](./media/tail-number.jpg)
+
 Tail numbers allow you to identify individual planes, even if they mostly look all the same.
 
 This program means to automate or simplify most operations related to upstream dependency management in loosely coupled automated CI/CD pipelines with systems like Concourse.
