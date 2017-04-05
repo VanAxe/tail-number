@@ -2,19 +2,19 @@
 
 ![](./media/tail-number.jpg)
 
-Tail numbers allow you to identify individual planes, even if they mostly look all the same.
+Tail numbers allow you to identify individual planes, even if they look all very similar.
 
-This program means to automate or simplify most operations related to upstream dependency management in loosely coupled automated CI/CD pipelines with systems like Concourse.
+This program means to automate or simplify most operations related to upstream dependency management in loosely coupled CI/CD pipelines. Specifically this program is built with love for Concourse.
 
-Tail number centers around two types of operations :
+Tail-number centers around two types of operations :
 
-* __Dependency operations__ which focus on managing upstream dependency and version bumps.
+* __Dependency operations__ which focuses on managing upstream dependency and version bumps.
 
 * __Branch operations__ which focuses on performing validation on commits and merging branches.
 
 ## Installation
 
-Use a binary appropriate for your platform from the _Releases_ page or `make build && sudo make install`.
+Use a binary appropriate for your platform from the [Releases](https://github.com/VanAxe/tail-number/releases) page or `make build && sudo make install`.
 
 ## Usage
 
@@ -23,6 +23,8 @@ TODO: Write usage instructions
 ## Compilation instructions
 
 `make build`
+
+TODO: Uhh... stuff related to Golang dependency management???
 
 ## Contributing
 
@@ -35,3 +37,7 @@ TODO: Write usage instructions
 ## Credits
 
 Alexis Vanier
+
+## License
+
+This program is released under the MIT license.
