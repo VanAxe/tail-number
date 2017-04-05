@@ -1,0 +1,64 @@
+# all paths assume relative to $PWD
+components:
+
+  repo1:
+    path: repo1/
+
+  repo2:
+    path: repo2/
+    read_tag: true # enabled by default
+
+  repo3:
+    path: repo3/
+    # this option disables read_tag
+    version_file: ./nested_path/version.md
+
+  repo4:
+    path: repo4/
+    version_file: ./CHANGELOG.md
+    # this is your last line of defence when dealing
+    # with heathens who don't use SemVer
+    use_checksum: true
+
+config:
+  # strategies include squash and rebase
+  working_repo: repo1/
+  merge_strategy: commit
+  tag: false # default is true
+  lockfile: .tn.lock.json
+  version_file: ./other_nested_path/version.md
+  quiet: true # default is verbose
+  debug: true # more verbose?
+
+constraints:
+  merge:
+    commiters:
+      - bob@is.trusted
+      - robot@is.alright
+    authors:
+      - ricky@blame.me
+    gpg:
+      required: true #default is false
+      keyserver: pool.sks.derp
+  dependencies:
+    # any tracking exceeding this would exit code > 0
+    repo2: patch
+    repo3: minor
+
+### another possible format for constraints
+constraints:
+  repo1:
+    commiters:
+      - bob@is.trusted
+      - robot@is.alright
+    authors:
+      - ricky@blame.me
+    gpg:
+      required: true #default is false
+      keyserver: pool.sks.derp
+  repo2:
+    version: patch
+  repo3:
+    commiters:
+      - '*@pivotal.io' # allow globbing?
+    version: minor
