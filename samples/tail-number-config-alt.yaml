@@ -30,8 +30,9 @@ config:
   quiet: true # default is verbose
   debug: true # more verbose?
 
+### another possible format for constraints
 constraints:
-  merge:
+  repo1:
     commiters:
       - bob@is.trusted
       - robot@is.alright
@@ -40,7 +41,9 @@ constraints:
     gpg:
       required: true #default is false
       keyserver: pool.sks.derp
-  dependencies:
-    # any tracking exceeding this would exit code > 0
-    repo2: patch
-    repo3: minor
+  repo2:
+    version: patch
+  repo3:
+    commiters:
+      - '*@pivotal.io' # allow globbing?
+    version: minor
