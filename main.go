@@ -1,4 +1,4 @@
-// Copyright © 2017 NAME HERE <EMAIL ADDRESS>
+// Copyright © 2017 Alexis Vanier <alexis@amonoid.io>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@ package main
 import "github.com/vanaxe/tail-number/cmd"
 
 var (
-	VERSION = "0.0.1"
+  VERSION = "0.0.1"
 )
 
 func main() {
-	cmd.Execute(VERSION)
+  cmd.Execute(VERSION)
 }
